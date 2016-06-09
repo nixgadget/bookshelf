@@ -20,7 +20,7 @@ if (POSTINSTALL_BUILD_CWD !== CWD) {
 
   fs.stat(BUILD_ARTIFACT, function(err, stats) {
     if (err || !(stats.isFile() || stats.isDirectory())) {
-      var opts = { env: process.env, stdio: 'inherit', maxBuffer : 500 * 1024 };
+      var opts = { env: process.env, stdio: 'inherit', maxBuffer : 1024 * 1024 };
 
       console.log('Building Bookshelf.js')
 
